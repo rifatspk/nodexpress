@@ -1,0 +1,29 @@
+extends layout 
+
+
+
+block content
+
+    h1 #{title}
+    .card-deck
+      each article, i in articles
+        .card
+          .card-body
+            h5.card-title 
+               a(href="/articles/" + article._id )= article.title
+            p.card-text.text-justify=  article.body.substr(0, 200)
+            a.card-link.btn.btn-primary(href='/articles/'+ article._id ) Read More
+            if users
+              if users.id ==article.author
+                a.card-link.btn.btn-info(href='/articles/edit/'+ article._id ) Edit
+                a.card-link.btn.btn-danger.delete-article(href='#', data-id= article._id) Delete
+
+
+
+
+
+
+
+            
+        
+    

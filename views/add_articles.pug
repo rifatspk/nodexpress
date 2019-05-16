@@ -1,0 +1,16 @@
+extends layout 
+block content
+    .container
+            h1 #{title}
+            form(action="/articles/add" method="POST")
+                .form-group
+                label(for="title") Title :
+                input.form-control(type="text" name="title")
+                //- .form-group
+                //- label(for="author") Author :
+                //- input.form-control(type="text" name="author")
+                .form-group
+                label(for="body") Body :
+                textarea.form-control(name="body", cols="30", rows="10")
+                br
+                input.btn.btn-primary(type="submit", value="Submit")
