@@ -1,4 +1,4 @@
 module.exports = {
-    database: 'mongodb://localhost:27017/nodexjs',
+    database: 'mongodb+srv://rifatspk:607964rifat$@cluster0-vnvai.mongodb.net/nodexpress?retryWrites=true',
     secret: 'yourset'
 }
