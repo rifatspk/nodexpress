@@ -122,8 +122,11 @@ app.use('/users', users);
 
 
 //Start Server
-app.listen(3000, function () {
-    console.log("server started on port 3000 ...........");
+const port = process.env.PORT || 5000;
+
+app.listen(port, function () {
+    console.log(`server started on port:${port}`);
 });
+
 
 
